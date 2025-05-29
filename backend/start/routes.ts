@@ -14,6 +14,7 @@ const LaddersController = () => import('#controllers/ladders_controller')
 const LevelsController = () => import('#controllers/levels_controller')
 const MajorsController = () => import('#controllers/majors_controller')
 const UsersController = () => import('#controllers/users_controller')
+const TeachersController = () => import('#controllers/teachers_controller')
 const YearsController = () => import('#controllers/years_controller')
 
 router.get('/', async () => {
@@ -27,6 +28,7 @@ router
     router.resource('level', LevelsController).apiOnly()
     router.resource('major', MajorsController).apiOnly()
     router.resource('user', UsersController).apiOnly()
+    router.resource('teacher', TeachersController).apiOnly()
     router.resource('year', YearsController).apiOnly()
   })
   .prefix('api')
